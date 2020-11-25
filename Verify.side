@@ -1,0 +1,68 @@
+{
+  "id": "b0cc5911-de64-4ff0-91b2-823260a48ec3",
+  "version": "2.0",
+  "name": "Verify",
+  "url": "http://automationpractice.com",
+  "tests": [{
+    "id": "20ded176-24de-40b4-a0ba-64149ed8354e",
+    "name": "Verify",
+    "commands": [{
+      "id": "cbb4d5a3-c29c-4648-9329-0c1ffaac00de",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9589f044-7265-4fcb-be7b-6451692be0c4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1616x886",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9dab7cf-d7b6-4c63-9de1-bedb830081d1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=.login", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//header[@id='header']/div[2]/div/div/nav/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://automationpractice.com/index.php?controller=my-account']", "xpath:href"],
+        ["xpath=//nav/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5269c083-b9ce-4047-a69c-7daa32e7827b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#SubmitLogin > span",
+      "targets": [
+        ["css=#SubmitLogin > span", "css:finder"],
+        ["xpath=//button[@id='SubmitLogin']/span", "xpath:idRelative"],
+        ["xpath=//p[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b79e82b-2a79-4fb6-a4fa-e82db3b73f9f",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Login - My Store",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c1a3a636-af3b-4679-ad5c-622cab6b08d9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["20ded176-24de-40b4-a0ba-64149ed8354e"]
+  }],
+  "urls": ["http://automationpractice.com/"],
+  "plugins": []
+}
